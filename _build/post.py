@@ -85,16 +85,18 @@ for slug in SHIP:
     s=re.sub(r'<form([^>]*?) action="[^"]*"', r'<form\1 action="#" onsubmit="return false;" data-preview="inactive"', s)
     s=s.replace('<button class="har-btn har-btn--submit" type="submit">Submit</button>','<button class="har-btn har-btn--submit" type="button" disabled aria-disabled="true">Submit (inactive in preview)</button>')
     if slug=='':
+        import hero_video; s=hero_video.apply(s)
         i=s.find('<section class="har-facts')
         s=s[:i]+blog_band()+s[i:]
     s=s.replace('\u2014',', ')
     d=OUT/slug; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(s)
     used|=set(re.findall(r'assets/images/([^"\')\s]+)', s))
 for u in sorted(used):
-    for base in (MINE,FLOOR):
+    for base in (MINE,FLOOR,pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/images'):
         if (base/u).exists(): shutil.copy(base/u, img/u); break
     else: print('MISSING image', u)
 shutil.copy(MINE/'Advanced-Healthcare-Logo-250x84-1.webp', img/'favicon.webp')
+if (pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/video').exists(): shutil.copytree(pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/video', OUT/'assets/video')
 (OUT/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
 (OUT/'.nojekyll').write_text('')
 (OUT/'README.md').write_text('# Advanced Healthcare design preview\n\nDesign preview only, not the live site. Homepage on the Local Ember Harbor template, with Local Ember standard legal pages. noindex, robots Disallow, inactive forms.\n')

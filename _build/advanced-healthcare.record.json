@@ -200,6 +200,13 @@
     "primary": "Claim Your Complimentary Consultation",
     "phone": true,
     "phone_label": "Call {{phone}}"
+   },
+   "video": {
+    "file": "assets/video/hero-loop.mp4",
+    "poster": "assets/images/hero-poster.jpg",
+    "source": "John's Drive mp4 (file id 1nrz5MymTrRLNJ-JDD0OJZ8X-7XWfSYVz), 00:31.0 to 00:43.6, silent, 12.6 s, 1280x720, 1.8 MB",
+    "mobile": "poster only under 700px and with prefers-reduced-motion",
+    "_note": "Harbor's emitter has no hero video field; _build/hero_video.py injects it. Build should carry this as a per-client hero option."
    }
   },
   "trust": {
