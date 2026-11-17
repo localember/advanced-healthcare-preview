@@ -1,7 +1,7 @@
 {
  "client_id": "LE-XXXXX",
  "design_template": "harbor",
- "_note": "PREVIEW RECORD for the Advanced Healthcare homepage preview on Harbor (2026-11-17). Every client fact below is from myadvhc.com as served on 2026-11-17, except insurance (BCBS + UHC in network), which came from Local Ember Advisor / John. UMR is planned only and is deliberately not shown.",
+ "_note": "PREVIEW RECORD for the Advanced Healthcare homepage preview on Harbor (2026-11-17). Client facts are from myadvhc.com as served on 2026-11-17. Insurance (BCBS and UHC in network) came from Local Ember Advisor / John's brief. John's round 2 answers (2026-11-17): SoftWave and Shockwave are separate services; Complimentary Consultation has no limits or end date; team is Dr. Irwin only.",
  "brand": {
   "clinic_name": "Advanced Healthcare",
   "primary_color": "#022038",
@@ -66,7 +66,7 @@
      "text": "Closed"
     }
    ],
-   "_hours_note": "From myadvhc.com 2026-11-17. Patient hours only; the massage-only hours (Tue 8am-7pm, Fri 8am-2pm) are left off the footer for space and need a home in the full build."
+   "_hours_note": "Patient hours from myadvhc.com footer (2026-11-17). The site also lists massage-only hours (Tuesday 8:00am-7:00pm, Friday 8:00am-2:00pm); those are not shown in the preview footer."
   }
  ],
  "primary_location": 1,
@@ -78,6 +78,10 @@
   {
    "slug": "softwave",
    "name": "SoftWave"
+  },
+  {
+   "slug": "shockwave",
+   "name": "Shockwave Therapy"
   },
   {
    "slug": "neuropathy",
@@ -188,7 +192,7 @@
    "slides": [
     {
      "headline": "Feel Good, Live Better Naturally",
-     "sub": "Chiropractic care, SoftWave, neuropathy care and spinal decompression in {{city}}, with Dr. Nathan Irwin."
+     "sub": "Chiropractic care, SoftWave, shockwave, neuropathy care and spinal decompression in {{city}}, with Dr. Nathan Irwin."
     }
    ],
    "note": "In network with BCBS and UHC",
@@ -203,6 +207,7 @@
     "Serving Fort Collins Since 2005",
     "Palmer College of Chiropractic Graduate",
     "SoftWave Therapy",
+    "Shockwave Therapy",
     "In Network With BCBS and UHC"
    ]
   },
@@ -277,6 +282,10 @@
      "body": "Unfocused acoustic-wave sessions for minor muscle aches, alongside chiropractic care."
     },
     {
+     "title": "Shockwave Therapy",
+     "body": "Shockwave therapy for long-running tendon and heel problems that have stopped easing."
+    },
+    {
      "title": "Neuropathy Care",
      "body": "The mechanical and spinal side of neuropathy, alongside the medical care you already have."
     },
@@ -285,13 +294,14 @@
      "body": "Gentle motorised traction for the low back, easing pressure on an irritated disc or nerve."
     }
    ],
-   "image_alt": "An adjustment room at {{clinic_name}} in {{city}}"
+   "image_alt": "An adjustment room at {{clinic_name}} in {{city}}",
+   "_note": "SoftWave and Shockwave are separate services (John, 2026-11-17). Bodies are catalog card_blurbs: catalog/services/softwave.json and shockwave.json."
   },
   "conditions": {
    "headline": "What Can a {{city}} Chiropractor Help With?",
    "body": [
     "Our first priority is understanding where you are, then helping you get out of pain. From there, the aim is to help you recover, move better, and stay well, whether you are dealing with musculoskeletal pain, a sports or work injury, or focused on your overall health and movement.",
-    "Care here pairs chiropractic adjustments with SoftWave, neuropathy care, spinal decompression, massage and rehab, each aimed at finding the root cause of your discomfort."
+    "Care here pairs chiropractic adjustments with SoftWave, shockwave, neuropathy care, spinal decompression, massage and rehab, each aimed at finding the root cause of your discomfort."
    ],
    "cards": [
     {
@@ -390,7 +400,7 @@
      "a": "Just yourself and any relevant history, such as past imaging or a note from another provider if you have one. Our front desk will handle the rest."
     }
    ],
-   "_note": "Harbor pack FAQ, unchanged except the insurance answer (BCBS + UHC per Local Ember Advisor/John; UMR planned, not shown)."
+   "_note": "Harbor pack FAQ, unchanged except the insurance answer (BCBS and UHC in network, per Local Ember Advisor / John)."
   }
  },
  "external_ids": {
