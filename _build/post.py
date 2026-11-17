@@ -86,6 +86,7 @@ for slug in SHIP:
     s=s.replace('<button class="har-btn har-btn--submit" type="submit">Submit</button>','<button class="har-btn har-btn--submit" type="button" disabled aria-disabled="true">Submit (inactive in preview)</button>')
     if slug=='':
         import hero_video; s=hero_video.apply(s)
+        import svc_images; s=svc_images.apply(s)
         i=s.find('<section class="har-facts')
         s=s[:i]+blog_band()+s[i:]
     s=s.replace('\u2014',', ')

@@ -302,7 +302,26 @@
     }
    ],
    "image_alt": "An adjustment room at {{clinic_name}} in {{city}}",
-   "_note": "SoftWave and Shockwave are separate services (John, 2026-11-17). Bodies are catalog card_blurbs: catalog/services/softwave.json and shockwave.json."
+   "_note": "SoftWave and Shockwave are separate services (John, 2026-11-17). Bodies are catalog card_blurbs: catalog/services/softwave.json and shockwave.json.",
+   "images": {
+    "_note": "Harbor emitter has no per-row image field; _build/svc_images.py injects these. Originals in Drive 'Site Images' (ticket AHC-2026-11-17a).",
+    "lead_photo": {
+     "file": "assets/images/softwave-treatment.webp",
+     "from": "Softwave-Hero.webp",
+     "alt": "A provider treating a patient's foot with a SoftWave applicator"
+    },
+    "softwave_row": {
+     "file": "assets/images/softwave-unit.webp",
+     "from": "softwave-unit-1.webp",
+     "alt": "A SoftWave therapy unit with its touchscreen controls"
+    },
+    "shockwave_row": {
+     "file": "assets/images/shockwave-handpiece.webp",
+     "from": "Shockwave-Therapy-2.webp",
+     "alt": "A shockwave therapy handpiece being applied to a patient's arm",
+     "caveat": "source is 528x607, below 600px wide, only Shockwave photo supplied"
+    }
+   }
   },
   "conditions": {
    "headline": "What Can a {{city}} Chiropractor Help With?",
