@@ -1,0 +1,423 @@
+{
+ "client_id": "LE-XXXXX",
+ "design_template": "harbor",
+ "_note": "PREVIEW RECORD for the Advanced Healthcare homepage preview on Harbor (2026-11-17). Every client fact below is from myadvhc.com as served on 2026-11-17, except insurance (BCBS + UHC in network), which came from Local Ember Advisor / John. UMR is planned only and is deliberately not shown.",
+ "brand": {
+  "clinic_name": "Advanced Healthcare",
+  "primary_color": "#022038",
+  "contact_email": null,
+  "domain": "myadvhc.com",
+  "phone_display": "(970) 472-8333",
+  "phone_href": "9704728333",
+  "founded_year": "2005",
+  "booking_url": "/special/",
+  "socials": {
+   "facebook": null,
+   "youtube": null,
+   "twitter": null,
+   "instagram": null
+  },
+  "favicon": "favicon.webp"
+ },
+ "locations": [
+  {
+   "location_name": "Fort Collins",
+   "nap": {
+    "address_street": "2531 S Shields St #2h",
+    "address_city": "Fort Collins",
+    "address_state": "CO",
+    "address_zip": "80526",
+    "maps_query": "Advanced Healthcare, 2531 S Shields St, Fort Collins, CO 80526"
+   },
+   "service_area": "Fort Collins area",
+   "hours": [
+    {
+     "day": "Monday",
+     "text": "8am-12pm, 2pm-6pm"
+    },
+    {
+     "day": "Tuesday",
+     "text": "2pm-6pm"
+    },
+    {
+     "day": "Wednesday",
+     "text": "8am-12pm, 2pm-6pm"
+    },
+    {
+     "day": "Thursday",
+     "text": "8am-12pm, 2pm-6pm"
+    },
+    {
+     "day": "Friday",
+     "text": "By appointment"
+    },
+    {
+     "day": "Saturday",
+     "text": "Closed"
+    },
+    {
+     "day": "Sunday",
+     "text": "Closed"
+    }
+   ],
+   "_hours_note": "From myadvhc.com 2026-11-17. Patient hours only; the massage-only hours (Tue 8am-7pm, Fri 8am-2pm) are left off the footer for space and need a home in the full build."
+  }
+ ],
+ "primary_location": 1,
+ "doctor": {
+  "name": "Dr. Nathan Irwin",
+  "name_2": null
+ },
+ "services_offered": [
+  {
+   "slug": "softwave",
+   "name": "SoftWave"
+  },
+  {
+   "slug": "neuropathy",
+   "name": "Neuropathy Care"
+  },
+  {
+   "slug": "decompression",
+   "name": "Spinal Decompression"
+  },
+  {
+   "slug": "chiropractic",
+   "name": "Chiropractic Care"
+  },
+  {
+   "slug": "massage-therapy",
+   "name": "Massage Therapy"
+  },
+  {
+   "slug": "physical-rehabilitation",
+   "name": "Physical Rehabilitation"
+  }
+ ],
+ "conditions_offered": [],
+ "differentiators": [],
+ "copy_override": {},
+ "placeholders": false,
+ "team": [
+  {
+   "name": "Dr. Nathan Irwin",
+   "credential": "D.C.",
+   "role": "Founder and Chiropractor",
+   "bio": "Dr. Nathan Irwin DC has been helping patients become healthier and happier for many years with Fort Collins chiropractor treatment services. A graduate of Palmer College of Chiropractic, Davenport, Dr. Irwin founded Irwin Family Chiropractic in 2005 in hopes of treating his patients with a “whole-body approach” and family-oriented mindset. He has now incorporated physical medicine and numerous other exciting treatment styles into his office, thus founding Advanced Healthcare. His patients can now enjoy a wide variety of unique and individualized Fort Collins chiropractic treatments to help them achieve their goals.",
+   "_bio_source": "VERBATIM from https://www.myadvhc.com/who-we-are/ (2026-11-17).",
+   "photo": "Chiropractor-Nate-Irwin.webp"
+  }
+ ],
+ "reviews": [
+  {
+   "name": "Lauren P.",
+   "stars": "⭐⭐⭐⭐⭐",
+   "text": "I have been going to Advanced Healthcare Chiropractic for a few years now, after suffering from back, shoulder, and neck pain related to 2 car accidents, getting bucked off a horse, and in general, having scoliosis. Over the last few years, my pain has been significantly minimized and I can function as a normal human being!! The team there is very helpful and treats me as an individual, even giving high fives when I show up! They created a plan to fit my needs, yet I know I am in control of my own treatment every step of the way. They also have amazing massage services there. Michelle is incredible!"
+  },
+  {
+   "name": "Pam F.",
+   "stars": "⭐⭐⭐⭐⭐",
+   "text": "My entire family enjoys coming to Advanced Healthcare Chiropractic. Every member of our family has benefited from the care at Advanced Healthcare. Whether it was treating nerve damage from back surgery or trying to prevent sports injuries, our family has definitely reaped the rewards of corrective chiropractic care. The exercises and strength training are amazing along with the positive attitude of all the staff at Advanced Healthcare, who are willing to train you in the proper way to keep your body healthy and strong. Thank you Advanced Healthcare for giving our family a better way to live our lives!"
+  },
+  {
+   "name": "Karli H.",
+   "stars": "⭐⭐⭐⭐⭐",
+   "text": "I have been at Advanced Healthcare Chiropractic for two years and it has made a huge difference. The most dramatic change for me has been my sleep quality. For years I had a hard time falling and staying asleep. Since starting care at Advanced Healthcare, I have found that as soon as I lay down I fall to sleep with few to no disturbances until I wake up. The “whole package” of stretches, strengthening, massage, and adjustments makes the difference."
+  },
+  {
+   "name": "Katie K.",
+   "stars": "⭐⭐⭐⭐⭐",
+   "text": "My sciatica is almost gone. I sleep through the night and am able to work full time again. I went camping last weekend and felt really good! The exercises given to me are helping me care for my body long-term rather than crisis management style. Your staff is wonderful! Not only are they helpful but I’ve made friends with several of your staff in the process."
+  },
+  {
+   "name": "Jeannie S.",
+   "stars": "⭐⭐⭐⭐⭐",
+   "text": "I’ve been going to Advanced Healthcare Chiropractic for about a month and a half and have noticed a great improvement. My body feels more open and alive. The tension in my back and neck is lessening significantly. I am finally sleeping at night without neck pain. I highly recommend Advanced Healthcare and am thankful for how they’ve helped me!"
+  }
+ ],
+ "_reviews_note": "VERBATIM from myadvhc.com home + /testimonials/ (2026-11-17). Star ratings are not shown on his site; the stars field is the record shape only.",
+ "photos": {
+  "hero": [
+   "Chiropractic-Fort-Collins-CO-Information-Center.webp",
+   "Chiropractic-Fort-Collins-CO-Building-Front.webp"
+  ],
+  "logo": "Advanced-Healthcare-Logo-250x84-1.webp",
+  "footer_logo": "Advanced-Healthcare-Logo-250x84-1.webp",
+  "welcome": "Chiropractor-Nate-Irwin.webp",
+  "our_expertise": "Chiropractic-Fort-Collins-CO-Chiropractic-Adjustment-Room.webp",
+  "fun_facts": "Chiropractic-Fort-Collins-CO-Building-Front.webp",
+  "reviews": "Chiropractic-Fort-Collins-CO-Information-Center.webp",
+  "page_hero": "Chiropractic-Fort-Collins-CO-Information-Center.webp",
+  "conditions": "Chiropractic-Fort-Collins-CO-Information-Center.webp"
+ },
+ "offer": {
+  "headline": "Complimentary Consultation",
+  "detail": "A complimentary consultation for new patients.",
+  "_source": "myadvhc.com/special/ (2026-11-17): 'New Patient Special / Complimentary Consultation'."
+ },
+ "payment": {
+  "model": "insurance",
+  "faq_answer": "We are in network with BCBS and UHC. Call our office at (970) 472-8333 with any questions about your plan.",
+  "cost_p": "We are in network with BCBS and UHC. Call our office at (970) 472-8333 with any questions about your plan.",
+  "cost_items": [
+   "In network with BCBS and UHC.",
+   "No referral needed to book a first visit."
+  ],
+  "cost_note": "We cannot promise a specific outcome; every body is different."
+ },
+ "home": {
+  "sections": [
+   "hero",
+   "icons",
+   "trust",
+   "welcome",
+   "expertise",
+   "conditions",
+   "reviews",
+   "facts",
+   "faq"
+  ],
+  "hero": {
+   "kicker": "Chiropractor Fort Collins",
+   "slides": [
+    {
+     "headline": "Feel Good, Live Better Naturally",
+     "sub": "Chiropractic care, SoftWave, neuropathy care and spinal decompression in {{city}}, with Dr. Nathan Irwin."
+    }
+   ],
+   "note": "In network with BCBS and UHC",
+   "cta": {
+    "primary": "Claim Your Complimentary Consultation",
+    "phone": true,
+    "phone_label": "Call {{phone}}"
+   }
+  },
+  "trust": {
+   "items": [
+    "Serving Fort Collins Since 2005",
+    "Palmer College of Chiropractic Graduate",
+    "SoftWave Therapy",
+    "In Network With BCBS and UHC"
+   ]
+  },
+  "icons": [
+   {
+    "kind": "well",
+    "title": "Meet Dr. Irwin",
+    "body": "Learn a little more about the team at {{clinic_name}}",
+    "cta": "Learn More",
+    "href": "/who-we-are/",
+    "icon": "team"
+   },
+   {
+    "kind": "cta",
+    "title": "NEW PATIENT SPECIAL",
+    "cta": "CLICK HERE",
+    "href": "/special/",
+    "icon": "badge"
+   },
+   {
+    "kind": "well",
+    "title": "Testimonials",
+    "body": "See what others have experienced at {{clinic_name}}",
+    "cta": "Learn More",
+    "href": "/patient-stories/",
+    "icon": "bubbles"
+   }
+  ],
+  "welcome": {
+   "watermark": "SINCE 2005",
+   "fore": "Serving {{city}}",
+   "eyebrow_mark": "Your",
+   "eyebrow_rest": "Chiropractor",
+   "headline": "Meet Dr. Nathan Irwin",
+   "credentials": "Doctor of Chiropractic • Palmer College of Chiropractic, Davenport • Founded Irwin Family Chiropractic in 2005",
+   "body": [
+    "Dr. Nathan Irwin DC has been helping patients become healthier and happier for many years with Fort Collins chiropractor treatment services. A graduate of Palmer College of Chiropractic, Davenport, Dr. Irwin founded Irwin Family Chiropractic in 2005 in hopes of treating his patients with a “whole-body approach” and family-oriented mindset. He has now incorporated physical medicine and numerous other exciting treatment styles into his office, thus founding Advanced Healthcare. His patients can now enjoy a wide variety of unique and individualized Fort Collins chiropractic treatments to help them achieve their goals."
+   ],
+   "image": "Chiropractor-Nate-Irwin.webp",
+   "image_alt": "Dr. Nathan Irwin, chiropractor in {{city}}",
+   "link": {
+    "label": "Meet Dr. Irwin →",
+    "href": "/who-we-are/"
+   },
+   "show_services": false,
+   "services": [
+    {
+     "label": "SOFTWAVE",
+     "href": "/softwave/",
+     "image": "",
+     "alt": "SoftWave in {{city}}"
+    },
+    {
+     "label": "NEUROPATHY CARE",
+     "href": "/neuropathy/",
+     "image": "Neuropathy-Treatment-55.webp",
+     "alt": "Neuropathy care in {{city}}"
+    },
+    {
+     "label": "SPINAL DECOMPRESSION",
+     "href": "/decompression/",
+     "image": "Spinal-Decompression-55.webp",
+     "alt": "Spinal decompression in {{city}}"
+    }
+   ]
+  },
+  "expertise": {
+   "headline": "Advanced Care Under One Roof",
+   "items": [
+    {
+     "title": "SoftWave",
+     "body": "Unfocused acoustic-wave sessions for minor muscle aches, alongside chiropractic care."
+    },
+    {
+     "title": "Neuropathy Care",
+     "body": "The mechanical and spinal side of neuropathy, alongside the medical care you already have."
+    },
+    {
+     "title": "Spinal Decompression",
+     "body": "Gentle motorised traction for the low back, easing pressure on an irritated disc or nerve."
+    }
+   ],
+   "image_alt": "An adjustment room at {{clinic_name}} in {{city}}"
+  },
+  "conditions": {
+   "headline": "What Can a {{city}} Chiropractor Help With?",
+   "body": [
+    "Our first priority is understanding where you are, then helping you get out of pain. From there, the aim is to help you recover, move better, and stay well, whether you are dealing with musculoskeletal pain, a sports or work injury, or focused on your overall health and movement.",
+    "Care here pairs chiropractic adjustments with SoftWave, neuropathy care, spinal decompression, massage and rehab, each aimed at finding the root cause of your discomfort."
+   ],
+   "cards": [
+    {
+     "title": "BACK PAIN",
+     "body": "Most back pain has a reason, and finding it beats guessing at it.",
+     "href": "/back-pain/",
+     "image": "back-pain.webp",
+     "alt": "Back pain care in {{city}}"
+    },
+    {
+     "title": "NECK PAIN",
+     "body": "The desk, the phone, and the pillow you actually use matter more than most advice admits.",
+     "href": "/neck-pain/",
+     "image": "neck-pain.webp",
+     "alt": "Neck pain care in {{city}}"
+    },
+    {
+     "title": "HEADACHES & MIGRAINES",
+     "body": "A lot of headaches start in the neck and shoulders.",
+     "href": "/headaches/",
+     "image": "headaches.webp",
+     "alt": "Headache care in {{city}}"
+    },
+    {
+     "title": "SCIATICA",
+     "body": "Sciatica is a symptom, and the useful question is where the nerve is being irritated.",
+     "href": "/sciatica/",
+     "image": "sciatica.webp",
+     "alt": "Sciatica care in {{city}}"
+    },
+    {
+     "title": "DISC INJURY",
+     "body": "A scan report can read frightening and still not be the reason you hurt.",
+     "href": "/disc-injury/",
+     "image": "disc-injury.webp",
+     "alt": "Disc injury care in {{city}}"
+    },
+    {
+     "title": "WELLNESS",
+     "body": "Ongoing care for people who would rather keep moving well than wait for the next problem.",
+     "href": "/wellness-care/",
+     "image": "wellness.webp",
+     "alt": "Wellness care in {{city}}"
+    }
+   ]
+  },
+  "reviews": {
+   "pick": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "faq": {
+   "items": [
+    {
+     "q": "What happens at a first visit?",
+     "a": "We start by listening. Expect a conversation about your history and goals, a hands-on exam, and a clear explanation of what we found and the options that fit, before anything else."
+    },
+    {
+     "q": "Do I need a referral to come in?",
+     "a": "No. You can book directly with our office; a referral from another provider is not required to be seen."
+    },
+    {
+     "q": "Is chiropractic care safe?",
+     "a": "Chiropractic care is widely used and well established. We tailor every plan to your body and history, and we will always explain what we are doing and why."
+    },
+    {
+     "q": "How many visits will I need?",
+     "a": "It depends on what is going on and how your body responds. After your first exam we will walk you through a plan and check in as you go, rather than committing you to a fixed number up front."
+    },
+    {
+     "q": "Do you take insurance?",
+     "a": "We are in network with BCBS and UHC. Call our office at (970) 472-8333 with any questions about your plan."
+    },
+    {
+     "q": "What kinds of problems do you help with?",
+     "a": "Everyday aches from desks and phones, back and neck pain, headaches, sciatica, and the strains that come with sport, work, and pregnancy. If you are not sure whether we can help, call and ask."
+    },
+    {
+     "q": "Do the adjustments hurt?",
+     "a": "Most people feel relief, not pain. We match the technique and the pressure to your body, and we check in with you throughout."
+    },
+    {
+     "q": "Can I come in for one issue, or only ongoing care?",
+     "a": "Either. Some people come in for a single problem and move on; others build regular care into their routine. We will be honest about what we think you need."
+    },
+    {
+     "q": "How soon might I feel a difference?",
+     "a": "It varies by person and problem. Some feel a change quickly, others need a little time. We will keep you posted on what to expect as we go."
+    },
+    {
+     "q": "What should I bring to my first visit?",
+     "a": "Just yourself and any relevant history, such as past imaging or a note from another provider if you have one. Our front desk will handle the rest."
+    }
+   ],
+   "_note": "Harbor pack FAQ, unchanged except the insurance answer (BCBS + UHC per Local Ember Advisor/John; UMR planned, not shown)."
+  }
+ },
+ "external_ids": {
+  "gtm_container": null
+ },
+ "nav": [
+  {
+   "text": "Home",
+   "url": "/"
+  },
+  {
+   "text": "Who We Are",
+   "url": "/who-we-are/"
+  },
+  {
+   "text": "Services",
+   "url": "/services/"
+  },
+  {
+   "text": "Conditions",
+   "url": "/conditions/"
+  },
+  {
+   "text": "Patient Stories",
+   "url": "/patient-stories/"
+  },
+  {
+   "text": "Blog",
+   "url": "/blog/"
+  },
+  {
+   "text": "Contact",
+   "url": "/contact-us/"
+  }
+ ]
+}
