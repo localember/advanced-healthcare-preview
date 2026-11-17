@@ -28,6 +28,16 @@ BANNER_CSS='''<style>
 @media (max-width:900px){.har-blog__grid{grid-template-columns:1fr}}
 .le-preview-off{cursor:not-allowed}
 </style>'''
+GOLD_CSS='''<style id="le-cta-gold">
+/* Advanced Healthcare: main CTAs in logo goldenrod #E0A424 with navy #022038 text (7.51:1). Hover #C8901A (5.89:1). Navy stays on headers, nav and secondary links. */
+:root{--le-cta-gold:#E0A424;--le-cta-gold-hover:#C8901A;--le-cta-gold-text:#022038}
+.har-btn--book,.har-btn--submit,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
+.har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
+.har-btn--book.har-welcome__link{background-color:var(--har-cta)!important;border-color:var(--har-cta)!important;color:#fff!important;font-weight:500}
+.har-btn--book.har-welcome__link:hover{background-color:var(--har-cta)!important;color:#fff!important}
+.har-btn--submit[disabled]{opacity:.85;cursor:not-allowed}
+</style>
+'''
 BANNER='<div class="le-preview-banner" role="note">Design preview, not live. Forms are inactive.</div>'
 POSTS=[
  ('3 Tips from a Fort Collins CO Chiropractor','Are you tired of dealing with persistent back pain, neck stiffness, or shoulder discomfort?','https://www.myadvhc.com/3-tips-from-a-fort-collins-co-chiropractor/','3-Tips.webp'),
@@ -69,7 +79,7 @@ for slug in SHIP:
         s=re.sub(r'<meta name="robots"[^>]*>','<meta name="robots" content="noindex,nofollow">',s)
     else:
         s=s.replace('<head>','<head>\n<meta name="robots" content="noindex,nofollow">',1)
-    s=s.replace('</head>', BANNER_CSS+'\n</head>',1)
+    s=s.replace('</head>', BANNER_CSS+'\n'+GOLD_CSS+'</head>',1)
     s=re.sub(r'(<body[^>]*>)', r'\1'+BANNER, s, count=1)
     # inactive forms
     s=re.sub(r'<form([^>]*?) action="[^"]*"', r'<form\1 action="#" onsubmit="return false;" data-preview="inactive"', s)

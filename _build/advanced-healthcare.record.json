@@ -17,7 +17,13 @@
    "twitter": null,
    "instagram": null
   },
-  "favicon": "favicon.webp"
+  "favicon": "favicon.webp",
+  "cta_button": {
+   "background": "#E0A424",
+   "hover": "#C8901A",
+   "text": "#022038",
+   "_note": "John 2026-11-17: main CTAs (book, claim offer, New Patient Special, submit) in goldenrod from his logo; navy (#022038 primary_color) stays for header, nav, trust band and secondary links. Contrast 7.51:1, hover 5.89:1. Harbor's emitter has no CTA-button field yet, so _build/post.py injects the CSS; Build should carry this as a per-client override, not a Harbor design edit."
+  }
  },
  "locations": [
   {
