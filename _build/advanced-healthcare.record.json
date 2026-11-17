@@ -12,10 +12,11 @@
   "founded_year": "2005",
   "booking_url": "/special/",
   "socials": {
-   "facebook": null,
-   "youtube": null,
-   "twitter": null,
-   "instagram": null
+   "facebook": "https://www.facebook.com/AdvancedHealthcarePLLC/",
+   "twitter": "https://twitter.com/AdvHC",
+   "youtube": "https://www.youtube.com/channel/UCXiiUtTMeOtYIlWgTKLu37A/videos",
+   "instagram": null,
+   "_note": "Round 5 (2026-11-17): read from the myadvhc.com footer. Facebook, X (twitter key) and YouTube only. Harbor's emitter renders facebook/instagram/youtube only, so _build/round5.py re-renders both social slots (header VISIT US and footer) from this object, X included."
   },
   "favicon": "favicon.webp",
   "cta_button": {
@@ -76,35 +77,62 @@
  },
  "services_offered": [
   {
+   "slug": "chiropractic",
+   "name": "Chiropractic Care",
+   "body": "Specific adjustments matched to what your spine needs, not a one-size-fits-all routine.",
+   "_catalog": "services/chiropractic.json"
+  },
+  {
    "slug": "softwave",
-   "name": "SoftWave"
+   "name": "SoftWave",
+   "body": "Unfocused acoustic-wave sessions for minor muscle aches, alongside chiropractic care.",
+   "_catalog": "services/softwave.json"
   },
   {
    "slug": "shockwave",
-   "name": "Shockwave Therapy"
-  },
-  {
-   "slug": "neuropathy",
-   "name": "Neuropathy Care"
+   "name": "Shockwave Therapy",
+   "body": "Shockwave therapy for long-running tendon and heel problems that have stopped easing.",
+   "_catalog": "services/shockwave.json"
   },
   {
    "slug": "decompression",
-   "name": "Spinal Decompression"
+   "name": "Spinal Decompression",
+   "body": "Gentle motorised traction for the low back, easing pressure on an irritated disc or nerve.",
+   "_catalog": "services/decompression.json"
   },
   {
-   "slug": "chiropractic",
-   "name": "Chiropractic Care"
+   "slug": "neuropathy",
+   "name": "Neuropathy Care",
+   "body": "The mechanical and spinal side of neuropathy, alongside the medical care you already have.",
+   "_catalog": "services/neuropathy.json"
   },
   {
    "slug": "massage-therapy",
-   "name": "Massage Therapy"
+   "name": "Massage Therapy",
+   "body": "Therapeutic massage from licensed therapists, easing tight muscles so the work holds.",
+   "_catalog": "services/massage-therapy.json"
   },
   {
    "slug": "physical-rehabilitation",
-   "name": "Physical Rehabilitation"
+   "name": "Physical Rehabilitation",
+   "body": "Guided exercise and movement coaching, paired with chiropractic care, so the change holds after you leave.",
+   "_catalog": "services/physical-rehabilitation.json"
+  },
+  {
+   "slug": "wellness-care",
+   "name": "Wellness Care",
+   "body": "Ongoing care for people who would rather keep moving well than wait for the next problem.",
+   "_catalog": "services/wellness-care.json",
+   "_note": "Round 5: added so the homepage WELLNESS card (myadvhc.com lists Wellness among its six condition cards) has a page."
   }
  ],
- "conditions_offered": [],
+ "conditions_offered": [
+  "back-pain",
+  "neck-pain",
+  "headaches",
+  "sciatica",
+  "disc-injury"
+ ],
  "differentiators": [],
  "copy_override": {},
  "placeholders": false,
@@ -167,13 +195,15 @@
  },
  "payment": {
   "model": "insurance",
-  "faq_answer": "We are in network with BCBS and UHC. Call our office at (970) 472-8333 with any questions about your plan.",
-  "cost_p": "We are in network with BCBS and UHC. Call our office at (970) 472-8333 with any questions about your plan.",
+  "faq_answer": "No referral is needed. We are in network with BCBS and UHC. Call our office at (970) 472-8333 with any questions about your plan.",
+  "cost_p": "No referral is needed to book a first visit. We are in network with BCBS and UHC, and we go over the costs with you before anything begins. Call our office at (970) 472-8333 with any questions about your plan.",
   "cost_items": [
    "In network with BCBS and UHC.",
-   "No referral needed to book a first visit."
+   "No referral needed to book a first visit.",
+   "We go over the costs with you before anything begins."
   ],
-  "cost_note": "We cannot promise a specific outcome; every body is different."
+  "cost_note": "We cannot promise a specific outcome; every body is different.",
+  "_note": "Round 5: Harbor applies payment only for self_pay; _build/build.py applies it for this insurance practice too, so every catalog cost section and payment FAQ says BCBS and UHC in network (record only, nothing else about insurance)."
  },
  "home": {
   "sections": [
@@ -461,5 +491,53 @@
    "text": "Contact",
    "url": "/contact-us/"
   }
- ]
+ ],
+ "conditions_helped": [
+  {
+   "title": "Back Pain",
+   "slug": "back-pain",
+   "body": "Most back pain has a reason, and finding it beats guessing at it."
+  },
+  {
+   "title": "Neck Pain",
+   "slug": "neck-pain",
+   "body": "The desk, the phone, and the pillow you actually use matter more than most advice admits."
+  },
+  {
+   "title": "Headaches & Migraines",
+   "slug": "headaches",
+   "body": "A lot of headaches start in the neck and shoulders."
+  },
+  {
+   "title": "Sciatica",
+   "slug": "sciatica",
+   "body": "Sciatica is a symptom, and the useful question is where the nerve is being irritated."
+  },
+  {
+   "title": "Disc Injury",
+   "slug": "disc-injury",
+   "body": "A scan report can read frightening and still not be the reason you hurt."
+  },
+  {
+   "title": "Wellness",
+   "slug": "wellness-care",
+   "body": "Ongoing care for people who would rather keep moving well than wait for the next problem."
+  }
+ ],
+ "_conditions_helped_note": "Round 5 (2026-11-17): the six condition cards on myadvhc.com (back pain, neck pain, headaches and migraines, sciatica, disc injury, wellness). Harbor ships the whole fleet condition set by default; _build/build.py limits the catalog condition pages to these slugs and the conditions hub reads this list. wellness-care is a catalog SERVICE page.",
+ "catalog_overrides": {
+  "_note": "Round 5: his own SoftWave and Shockwave photos (Drive 'Site Images', ticket AHC-2026-11-17a) replace the catalog stock on those two service pages. Other pages keep catalog stock.",
+  "softwave": {
+   "hero": {
+    "image": "softwave-treatment.webp",
+    "alt": "A provider treating a patient's foot with a SoftWave applicator at Advanced Healthcare in {{city}}"
+   }
+  },
+  "shockwave": {
+   "hero": {
+    "image": "shockwave-handpiece.webp",
+    "alt": "A shockwave therapy handpiece being applied to a patient's arm at Advanced Healthcare in {{city}}"
+   }
+  }
+ }
 }

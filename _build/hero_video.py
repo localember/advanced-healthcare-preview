@@ -8,9 +8,10 @@ CSS = '''<style id="le-hero-video">
 .le-hero-poster{background:#022038 url(assets/images/hero-poster.jpg) center/cover no-repeat}
 .le-hero-video{opacity:0;transition:opacity .6s ease}
 .le-hero-video.is-playing{opacity:1}
-/* navy gradient over the footage so white text and gold CTAs stay readable; replaces the flat black veil */
-.har-hero__slide{background-image:linear-gradient(90deg,rgba(2,32,56,.88) 0%,rgba(2,32,56,.72) 45%,rgba(2,32,56,.40) 100%),linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18))!important}
-@media (max-width:699px){.har-hero__actions .har-btn{max-width:100%;white-space:normal;text-align:center}.le-hero-video{display:none}.har-hero__slide{background-image:linear-gradient(rgba(2,32,56,.80),rgba(2,32,56,.80))!important}}
+/* Round 5: black gradient (was navy), lighter, left-weighted so the headline side stays readable */
+.har-hero__slide{background-image:linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.46) 45%,rgba(0,0,0,.28) 100%)!important}
+.har-hero__copy{text-shadow:0 1px 3px rgba(0,0,0,.45)}
+@media (max-width:699px){.har-hero__actions .har-btn{max-width:100%;white-space:normal;text-align:center}.le-hero-video{display:none}.har-hero__slide{background-image:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58))!important}}
 @media (prefers-reduced-motion:reduce){.le-hero-video{display:none}}
 </style>'''
 MARKUP = '''    <div class="le-hero-poster" aria-hidden="true"></div>

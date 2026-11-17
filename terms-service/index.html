@@ -18,6 +18,23 @@
 <style>:root {
   --har-cta: #022038;
 }</style>
+<style id="le-social">
+/* Round 5: social icons, 44px tap targets. Header: navy icons on the white top line. Footer: gold circles with navy icons on the navy colophon. */
+.har-social{align-items:center;gap:2px;flex-wrap:nowrap}
+.har-topline__right{flex-shrink:0}
+.har-topline__right{align-items:center}
+.har-social .har-social__icon{width:44px;height:44px;align-items:center;justify-content:center;margin:-10px 0}
+.har-social .har-social__icon svg{width:20px;height:20px;fill:#022038}
+.har-social .har-social__icon:hover svg,.har-social .har-social__icon:focus-visible svg{fill:#C8901A}
+.har-colophon__social{margin-top:18px;gap:12px;flex-wrap:wrap}
+.har-colophon__social a{width:44px;height:44px;padding:0;background:#E0A424}
+.har-colophon__social a svg{width:20px;height:20px;fill:#022038}
+.har-colophon__social a:hover,.har-colophon__social a:focus-visible{background:#fff}
+.har-colophon__social a:hover svg,.har-colophon__social a:focus-visible svg{fill:#022038}
+/* Harbor bug: its <1024px rule stacks .har-sshero__inner, but the two-column flex is .har-sshero__row, so service and condition heroes stayed side by side at 390px. */
+@media (max-width:1023px){.har-sshero__row{flex-direction:column;align-items:stretch;gap:28px}}
+.le-stat{display:block;font-family:var(--har-font-head);font-size:26px;line-height:1.25;color:#022038;margin:0 0 8px}
+</style>
 <style>
 .le-preview-banner{position:sticky;top:0;z-index:9999;background:#f2a63b;color:#022038;font:600 14px/1.4 Poppins,sans-serif;text-align:center;padding:8px 12px}
 :root{--har-ink:#022038;--har-comp-1:#022038}
@@ -39,8 +56,8 @@
 <style id="le-cta-gold">
 /* Advanced Healthcare: main CTAs in logo goldenrod #E0A424 with navy #022038 text (7.51:1). Hover #C8901A (5.89:1). Navy stays on headers, nav and secondary links. */
 :root{--le-cta-gold:#E0A424;--le-cta-gold-hover:#C8901A;--le-cta-gold-text:#022038}
-.har-btn--book,.har-btn--submit,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
-.har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
+.har-btn--book,.har-btn--submit,.har-btn--solid,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
+.har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-btn--solid:hover,.har-btn--solid:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
 .har-btn--book.har-welcome__link{background-color:var(--har-cta)!important;border-color:var(--har-cta)!important;color:#fff!important;font-weight:500}
 .har-btn--book.har-welcome__link:hover{background-color:var(--har-cta)!important;color:#fff!important}
 .har-btn--submit[disabled]{opacity:.85;cursor:not-allowed}
@@ -61,7 +78,9 @@
         <div class="har-topline__right">
           <p class="har-topline__visit" data-sd="header.visit">VISIT US:</p>
           <div class="har-social" data-sd="header.social">
-
+          <a class="har-social__icon" data-social="facebook" href="https://www.facebook.com/AdvancedHealthcarePLLC/" target="_blank" rel="noopener" aria-label="Advanced Healthcare on Facebook (opens in a new tab)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg></a>
+          <a class="har-social__icon" data-social="twitter" href="https://twitter.com/AdvHC" target="_blank" rel="noopener" aria-label="Advanced Healthcare on X (Twitter) (opens in a new tab)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a class="har-social__icon" data-social="youtube" href="https://www.youtube.com/channel/UCXiiUtTMeOtYIlWgTKLu37A/videos" target="_blank" rel="noopener" aria-label="Advanced Healthcare on YouTube (opens in a new tab)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
           </div>
         </div>
       </div>
@@ -75,12 +94,12 @@
         <nav class="har-nav har-nav--tight" aria-label="Primary">
           <ul class="har-nav__list" data-sd="header.navlist">
       <li class="har-nav__item" data-sd="header.navitem"><a class="har-nav__link" data-sd="header.navlink" href="../">Home</a></li>
-      <li class="har-nav__item"><a class="har-nav__link le-preview-off" href="#" title="This page comes in the full build" aria-disabled="true">Who We Are</a></li>
-      <li class="har-nav__item"><a class="har-nav__link le-preview-off" href="#" title="This page comes in the full build" aria-disabled="true">Services</a></li>
-      <li class="har-nav__item"><a class="har-nav__link le-preview-off" href="#" title="This page comes in the full build" aria-disabled="true">Conditions</a></li>
-      <li class="har-nav__item"><a class="har-nav__link le-preview-off" href="#" title="This page comes in the full build" aria-disabled="true">Patient Stories</a></li>
-      <li class="har-nav__item"><a class="har-nav__link le-preview-off" href="#" title="This page comes in the full build" aria-disabled="true">Blog</a></li>
-      <li class="har-nav__item"><a class="har-nav__link le-preview-off" href="#" title="This page comes in the full build" aria-disabled="true">Contact</a></li>
+      <li class="har-nav__item"><a class="har-nav__link" href="../who-we-are/">Who We Are</a></li>
+      <li class="har-nav__item"><a class="har-nav__link" href="../services/">Services</a></li>
+      <li class="har-nav__item"><a class="har-nav__link" href="../conditions/">Conditions</a></li>
+      <li class="har-nav__item"><a class="har-nav__link" href="../patient-stories/">Patient Stories</a></li>
+      <li class="har-nav__item"><a class="har-nav__link" href="../blog/">Blog</a></li>
+      <li class="har-nav__item"><a class="har-nav__link" href="../contact-us/">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -177,7 +196,9 @@
         <p class="har-colophon__label" data-sd="footer.brand">Advanced Healthcare</p>
         <p class="har-colophon__addr" data-sd="footer.addr">2531 S Shields St #2h, Fort Collins, CO 80526</p>
         <div class="har-colophon__social">
-
+          <a data-social="facebook" href="https://www.facebook.com/AdvancedHealthcarePLLC/" target="_blank" rel="noopener" aria-label="Advanced Healthcare on Facebook (opens in a new tab)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg></a>
+          <a data-social="twitter" href="https://twitter.com/AdvHC" target="_blank" rel="noopener" aria-label="Advanced Healthcare on X (Twitter) (opens in a new tab)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a data-social="youtube" href="https://www.youtube.com/channel/UCXiiUtTMeOtYIlWgTKLu37A/videos" target="_blank" rel="noopener" aria-label="Advanced Healthcare on YouTube (opens in a new tab)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
         </div>
       </div>
       <div class="har-colophon__col har-colophon__col--hours">

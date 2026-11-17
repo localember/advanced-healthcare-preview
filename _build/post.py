@@ -2,14 +2,20 @@ import re, shutil, pathlib, os
 SRC=pathlib.Path('site'); OUT=pathlib.Path('out')
 if OUT.exists(): shutil.rmtree(OUT)
 OUT.mkdir()
-SHIP=['', 'special', 'privacy-policy','terms-service','hipaa-privacy-policy','healthcare-disclaimer','good-faith-estimate','accessibility','anti-discrimination']
-LE='/workspace/le'
+SHIP=['', 'special', 'privacy-policy','terms-service','hipaa-privacy-policy','healthcare-disclaimer','good-faith-estimate','accessibility','anti-discrimination',
+ # round 5: inner pages (Harbor emitter archetypes + catalog pages this record publishes) and a blog index
+ 'who-we-are','services','conditions','patient-stories','contact-us','blog',
+ 'chiropractic','softwave','shockwave','decompression','neuropathy','massage-therapy','physical-rehabilitation','wellness-care',
+ 'back-pain','neck-pain','headaches','sciatica','disc-injury']
+LE=os.environ.get('LE','/workspace/le')
 DS=pathlib.Path(LE)/'design-system/harbor'
 for f in ['harbor.css','harbor-fonts.css','harbor.js','rough-notation.js']: shutil.copy(DS/f, OUT/f)
 shutil.copytree(DS/'assets/fonts', OUT/'assets/fonts')
 img=OUT/'assets/images'; img.mkdir(parents=True)
 FLOOR=pathlib.Path(LE)/'tools/bd-generator/clients/palmetto-static-src/assets/images'
-MINE=pathlib.Path('/workspace/irwin/mockup-2026-10-30/img')
+MINE=pathlib.Path(os.environ.get('AHC_MINE','/workspace/irwin/mockup-2026-10-30/img'))
+STOCK=pathlib.Path(LE)/'tools/bd-generator/assets/stock/Catalog'
+import round5
 BANNER_CSS='''<style>
 .le-preview-banner{position:sticky;top:0;z-index:9999;background:#f2a63b;color:#022038;font:600 14px/1.4 Poppins,sans-serif;text-align:center;padding:8px 12px}
 :root{--har-ink:#022038;--har-comp-1:#022038}
@@ -31,8 +37,8 @@ BANNER_CSS='''<style>
 GOLD_CSS='''<style id="le-cta-gold">
 /* Advanced Healthcare: main CTAs in logo goldenrod #E0A424 with navy #022038 text (7.51:1). Hover #C8901A (5.89:1). Navy stays on headers, nav and secondary links. */
 :root{--le-cta-gold:#E0A424;--le-cta-gold-hover:#C8901A;--le-cta-gold-text:#022038}
-.har-btn--book,.har-btn--submit,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
-.har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
+.har-btn--book,.har-btn--submit,.har-btn--solid,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
+.har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-btn--solid:hover,.har-btn--solid:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
 .har-btn--book.har-welcome__link{background-color:var(--har-cta)!important;border-color:var(--har-cta)!important;color:#fff!important;font-weight:500}
 .har-btn--book.har-welcome__link:hover{background-color:var(--har-cta)!important;color:#fff!important}
 .har-btn--submit[disabled]{opacity:.85;cursor:not-allowed}
@@ -59,6 +65,18 @@ def blog_band():
   </div>
 </section>
 '''
+def blog_page():
+    t=(SRC/'special'/'index.html').read_text()
+    a=t.index('<main id="main">'); b=t.index('</main>')
+    body=('<main id="main">\n<section class="har-pagehero" style="--har-pagehero-bg:url(assets/images/Chiropractic-Fort-Collins-CO-Information-Center.webp)">\n'
+          '  <div class="har-pagehero__inner">\n    <h1 class="har-pagehero__title">Blog</h1>\n  </div>\n</section>\n'
+          + blog_band().replace('<h2 class="har-blog__h" id="blog-h">From the Blog</h2>','<h2 class="har-blog__h" id="blog-h">Articles from Advanced Healthcare</h2>')
+          + '<p class="har-blog__all" style="padding:0 20px 64px">The full articles live on the current site for now. They move here in the full build.</p>\n')
+    t=t[:a]+body+t[b:]
+    t=re.sub(r'<title>[^<]*</title>','<title>Blog - Advanced Healthcare, Chiropractor in Fort Collins, CO</title>',t,count=1)
+    t=t.replace('href="/blog/"','href="/blog/" aria-current="page"',1)
+    (SRC/'blog').mkdir(exist_ok=True); (SRC/'blog'/'index.html').write_text(t)
+blog_page()
 used=set()
 for slug in SHIP:
     sp=SRC/slug/'index.html'; s=sp.read_text()
@@ -66,6 +84,14 @@ for slug in SHIP:
     pre='' if depth==0 else '../'
     if depth:
         s=s.replace('src="assets/', 'src="../assets/').replace('url(assets/','url(../assets/')
+    if slug=='':
+        import hero_video; s=hero_video.apply(s)
+        import svc_images; s=svc_images.apply(s)
+        s=round5.apply_home(s)
+        i=s.find('<section class="har-facts')
+        s=s[:i]+blog_band()+s[i:]
+    s=round5.apply_all(s)
+    s=round5.localize(slug, s)
     def fix(m):
         path=m.group(1)
         seg=path.strip('/').split('/')[0] if path.strip('/') else ''
@@ -83,22 +109,20 @@ for slug in SHIP:
     s=re.sub(r'(<body[^>]*>)', r'\1'+BANNER, s, count=1)
     # inactive forms
     s=re.sub(r'<form([^>]*?) action="[^"]*"', r'<form\1 action="#" onsubmit="return false;" data-preview="inactive"', s)
-    s=s.replace('<button class="har-btn har-btn--submit" type="submit">Submit</button>','<button class="har-btn har-btn--submit" type="button" disabled aria-disabled="true">Submit (inactive in preview)</button>')
-    if slug=='':
-        import hero_video; s=hero_video.apply(s)
-        import svc_images; s=svc_images.apply(s)
-        i=s.find('<section class="har-facts')
-        s=s[:i]+blog_band()+s[i:]
+    s=re.sub(r'<button class="har-btn har-btn--submit"([^>]*?) type="submit"([^>]*)>[^<]*</button>', r'<button class="har-btn har-btn--submit"\1 type="button" disabled aria-disabled="true"\2>Submit (inactive in preview)</button>', s)
     s=s.replace('\u2014',', ')
     d=OUT/slug; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(s)
     used|=set(re.findall(r'assets/images/([^"\')\s]+)', s))
 for u in sorted(used):
-    for base in (MINE,FLOOR,pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/images'):
+    for base in (pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/images',MINE,FLOOR,STOCK/'Services',STOCK/'Conditions',pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/images'):
         if (base/u).exists(): shutil.copy(base/u, img/u); break
-    else: print('MISSING image', u)
+    else:
+        for base in (STOCK/'Services',STOCK/'Conditions'):
+            if (base/u.replace('-',' ')).exists(): shutil.copy(base/u.replace('-',' '), img/u); break
+        else: print('MISSING image', u)
 shutil.copy(MINE/'Advanced-Healthcare-Logo-250x84-1.webp', img/'favicon.webp')
 if (pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/video').exists(): shutil.copytree(pathlib.Path(os.environ.get('AHC_REPO','.'))/'assets/video', OUT/'assets/video')
 (OUT/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
 (OUT/'.nojekyll').write_text('')
-(OUT/'README.md').write_text('# Advanced Healthcare design preview\n\nDesign preview only, not the live site. Homepage on the Local Ember Harbor template, with Local Ember standard legal pages. noindex, robots Disallow, inactive forms.\n')
+(OUT/'README.md').write_text((pathlib.Path(__file__).parent/'README.template.md').read_text())
 print('images', len(used))
