@@ -8,7 +8,7 @@ for p in pages:
     if 'name="robots" content="noindex' not in s: bad.append(f'{rel}: no noindex')
     if 'le-preview-banner' not in s: bad.append(f'{rel}: no banner')
     if '\u2014' in s: bad.append(f'{rel}: em dash')
-    for t in ('UMR', 'Dry Needling', 'dry needling', 'Same-week', 'TBD', '{{', 'type="submit"'):
+    for t in ('UMR', 'Same-week', 'TBD', '{{', 'type="submit"'):
         if t in s: bad.append(f'{rel}: contains {t!r}')
     for m in re.finditer(r'<form[^>]*>', s):
         if 'data-preview="inactive"' not in m.group(0): bad.append(f'{rel}: live form')

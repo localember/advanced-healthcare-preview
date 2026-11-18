@@ -25,3 +25,312 @@
   .le-audio{padding:16px}
   .le-crumbs{font-size:13px}
 }
+
+/* ==========================================================================
+   Round 8 mobile pass (390px, sanity-check 768). No em dashes.
+   Keep Harbor desktop layout; override stacked order and tap targets only.
+   ========================================================================== */
+
+/* Prevent leftover entrance translates from clipping photos or causing a side scroll. */
+@media (max-width: 1119px) {
+  .har-js [data-enter],
+  .har-js [data-enter].is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+img, video, audio, iframe {
+  max-width: 100%;
+}
+
+/* Header: logo, Book, and hamburger on one row. 44px tap targets. */
+@media (max-width: 1119px) {
+  .har-header__main {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .har-header__brand {
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .har-header__logo {
+    width: auto;
+    max-width: min(200px, 46vw);
+    max-height: 52px;
+    height: auto;
+  }
+  .har-header__navwrap {
+    width: auto;
+    flex: 0 0 0;
+    min-width: 0;
+    gap: 0;
+  }
+  .har-header__main > .har-btn--book {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .har-menu-toggle {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+  .har-nav__list.is-open .har-nav__link {
+    min-height: 48px;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .har-header__main {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .har-header__brand,
+  .har-header__navwrap {
+    width: auto;
+  }
+}
+
+/* Trust bar: wrap cleanly at tablet widths; stack already applies below 768. */
+@media (min-width: 768px) and (max-width: 900px) {
+  .har-trust__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 0;
+  }
+  .har-trust__item {
+    white-space: normal;
+    padding: 6px 14px;
+  }
+  .har-trust__item + .har-trust__item {
+    border-left: 0;
+  }
+}
+
+/* Conditions intro: DOM is photo then copy; on a stack, text should lead. */
+@media (max-width: 1119px) {
+  .har-conditions__intro {
+    flex-direction: column;
+  }
+  .har-conditions__copy { order: 1; }
+  .har-conditions__photo { order: 2; }
+  .har-conditions__cta { align-self: flex-start; }
+}
+
+
+/* Keep the homepage expertise two-column layout after flattening the lead wrapper. */
+@media (min-width: 1120px) {
+  .har-expertise__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "text rows"
+      "photo rows"
+      "btn rows";
+    align-items: center;
+    column-gap: var(--har-col-gap);
+  }
+  .le-exp-text { grid-area: text; }
+  .har-expertise__photo { grid-area: photo; width: 100%; }
+  .le-exp-more { grid-area: btn; justify-self: start; }
+  .har-expertise__rows { grid-area: rows; width: auto; align-self: center; }
+}
+
+/* Expertise: heading and intro, then the 1-2-3 rows, then photo and button. */
+@media (max-width: 1119px) {
+  .har-expertise__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .le-exp-text { order: 1; }
+  .har-expertise__rows { order: 2; }
+  .har-expertise__photo {
+    order: 3;
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+    display: block;
+  }
+  .le-exp-more {
+    order: 4;
+    align-self: flex-start;
+  }
+}
+
+/* Facts: keep text then photo, and stop the wave divider from covering the image. */
+@media (max-width: 1119px) {
+  .har-facts__inner {
+    padding: 64px var(--har-gut) 72px;
+    gap: 28px;
+  }
+  .har-facts__media { position: relative; z-index: 3; }
+  .har-facts__media img {
+    height: auto;
+    max-height: 280px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .har-divider { height: 90px; z-index: 2; }
+}
+
+/* Who we are: name and bio first, portrait second, once the card stacks. */
+@media (max-width: 1119px) {
+  .har-member {
+    flex-direction: column;
+  }
+  .har-member__photo,
+  .har-member__copy { width: 100%; }
+  .har-member__copy { order: 1; }
+  .har-member__photo { order: 2; }
+}
+
+/* Visit CTA: tighten stacked spacing; leave the logo above the heading. */
+@media (max-width: 767px) {
+  .har-visit { padding-top: 32px; }
+  .har-visit__media { padding: 24px 24px 0; }
+  .har-visit__copy { padding: 16px 24px 28px; }
+  .har-visit__kicker { margin-top: 0; }
+  .har-visit__copy .har-btn {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+}
+
+/* Footer / colophon stacking and legal tap targets. */
+@media (max-width: 767px) {
+  .har-colophon__inner {
+    padding-top: 56px;
+    padding-bottom: 32px;
+    gap: 28px;
+  }
+  .har-colophon__links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 4px;
+  }
+}
+
+/* Hero readability and CTA size. */
+@media (max-width: 767px) {
+  .har-hero__stage,
+  .har-hero__slide { min-height: 460px; }
+  .har-hero__slide { padding-block: 52px 28px; }
+  .har-hero__grid { width: 100%; }
+  .har-hero .har-btn {
+    min-height: 44px;
+  }
+}
+
+/* Cards, buttons, form fields, icon band. */
+@media (max-width: 767px) {
+  .har-btn,
+  .har-btn--outline,
+  .har-btn--solid,
+  .har-btn--book,
+  .har-btn--submit {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .har-offering { padding: 22px 20px 24px; }
+  .har-icons__grid { margin-top: 0; }
+  .har-card { padding: 24px 20px; }
+  .har-field__input {
+    min-height: 44px;
+    font-size: 16px;
+  }
+  .har-sshero__h { font-size: clamp(28px, 8vw, 40px); }
+  .har-sshero__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/* Flip cards: hover is not available on a phone. Stack title, text, and link. */
+@media (hover: none), (max-width: 767px) {
+  .har-flip {
+    height: auto;
+    max-width: none;
+    perspective: none;
+  }
+  .har-flip__scene {
+    transform: none !important;
+    height: auto;
+    transform-style: flat;
+  }
+  .har-flip__front {
+    position: relative;
+    height: 200px;
+    transform: none;
+  }
+  .har-flip__back {
+    position: relative;
+    transform: none;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    height: auto;
+    min-height: 0;
+    background: var(--har-comp-1, #022038);
+  }
+  .har-flip__back .har-flip__img,
+  .har-flip__back .har-flip__overlay { display: none; }
+  .har-flip__back .har-flip__content {
+    position: relative;
+    height: auto;
+    padding: 16px 16px 20px;
+  }
+  .har-flip__back .har-flip__title { display: none; }
+  .har-flip__more {
+    min-height: 44px;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* FAQ accordion tap targets. */
+@media (max-width: 767px) {
+  .har-faq__q,
+  .har-ssfaq .har-faq__q {
+    min-height: 48px;
+    padding: 14px 16px;
+  }
+}
+
+/* Audio player width and transcript control. */
+.le-audio audio {
+  width: 100%;
+  max-width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+}
+.le-audio summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .le-audio { margin: 20px 0; padding: 16px; }
+  .le-audio__h { font-size: 18px; }
+}
+
+@media (max-width: 390px) {
+  .le-audio { padding: 16px; }
+  .le-crumbs { font-size: 13px; }
+}
+

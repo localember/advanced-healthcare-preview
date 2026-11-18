@@ -12,7 +12,7 @@ The new patient exam is the pillar of treatment and is more lengthy and more in 
 
 ## Types of care
 
-Patients choose the type of care: visit-to-visit care (short-term, to get the pain out of the area); relief care (typically two to six weeks, aimed at increasing range of motion and decreasing muscle guarding and pain, sometimes with massage, decompression, or SoftWave); or corrective care (strength-based rehabilitation, endurance first, then dynamic strength training). After relief and/or corrective care, some patients choose wellness care to maintain results, at every other week, every three weeks, or once a month.
+Patients choose the type of care: visit-to-visit care (short-term, to get the pain out of the area); relief care (typically two to six weeks, aimed at increasing range of motion and decreasing muscle guarding and pain, sometimes with massage, decompression, dry needling, or SoftWave); or corrective care (strength-based rehabilitation, endurance first, then dynamic strength training). After relief and/or corrective care, some patients choose wellness care to maintain results, at every other week, every three weeks, or once a month.
 
 ## Low back pain
 
@@ -34,6 +34,7 @@ Dr. Irwin describes lower back pain in Fort Collins as something that can start 
 - [Shockwave therapy](https://myadvhc.com/shockwave/)
 - [Spinal decompression](https://myadvhc.com/decompression/)
 - [Massage therapy](https://myadvhc.com/massage-therapy/)
+- [Dry needling](https://myadvhc.com/dry-needling/)
 - [Physical rehabilitation](https://myadvhc.com/physical-rehabilitation/)
 - [Neuropathy care](https://myadvhc.com/neuropathy/)
 - [Who we are](https://myadvhc.com/who-we-are/)

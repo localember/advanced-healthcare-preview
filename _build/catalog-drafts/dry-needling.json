@@ -1,0 +1,91 @@
+{
+  "id": "dry-needling",
+  "name": "Dry Needling",
+  "slug": "dry-needling",
+  "status": "catalog draft",
+  "note": "New catalog file. No dry-needling.json existed in localember/localember tools/bd-generator/catalog/services. Add this to the catalog repo later; do not push it from this preview. Body is limited to Dr. Irwin's November 2026 voice memos plus the standard clinic insurance block. Do not invent mechanism, session length, needle type, sensations, or safety claims.",
+  "h1": "Dry Needling in {{city}}, {{state}}",
+  "nav_label": "Dry Needling",
+  "short_name": "Dry Needling",
+  "hero": {
+    "kicker": "What we do",
+    "sub": "Dry needling is one of the treatments Dr. Irwin uses in the office, including for low back pain, as part of relief care, and as an option some wellness patients choose once a month.",
+    "image": "Catalog/Services/placeholder-clinic-treatment.webp",
+    "alt": "A treatment room at Advanced Healthcare in {{city}}"
+  },
+  "meta": [
+    "Complimentary consultation for new patients",
+    "In network with BCBS and UHC"
+  ],
+  "blocks": [
+    {
+      "type": "answer",
+      "label": "The short answer",
+      "text": "Dr. Irwin offers dry needling at Advanced Healthcare in Fort Collins. He includes it among the treatments used for low back pain, as one of the modalities in relief care (alongside massage, decompression, and SoftWave) when the goal is to get symptoms out as quickly as possible, and as an option some wellness patients elect once a month to help maintain healthy muscle function."
+    },
+    {
+      "type": "lede",
+      "text": "This page stays inside what Dr. Irwin said in his November 2026 voice memos. If you want to know whether dry needling belongs in your plan, that is worked out at the first exam."
+    },
+    {
+      "type": "h2",
+      "text": "When Dr. Irwin uses dry needling"
+    },
+    {
+      "type": "p",
+      "text": "In his low back pain memo, he lists dry needling among the modalities used in the office, alongside spinal decompression for disc-related injuries or osteoarthritic change, shockwave therapy, massage therapy, and stretching through full strength and rehabilitation."
+    },
+    {
+      "type": "p",
+      "text": "In his types of care memo, relief care is typically two to six weeks. A lot of times that type of care includes different modalities, like massage therapy, decompression, dry needling, or SoftWave therapy, to try to get symptoms out as fast as possible. The goal of relief care is increasing range of motion and decreasing muscle guarding, spasm, or pain, to the point where the patient feels better."
+    },
+    {
+      "type": "p",
+      "text": "In his wellness care memo, some patients, after relief and/or a full corrective form of care, elect spinal decompression therapy or dry needling once a month just to maintain good healthy function of the muscles."
+    },
+    {
+      "type": "h2",
+      "text": "How do I know if it is part of my plan?"
+    },
+    {
+      "type": "p",
+      "text": "The type of care, and which modalities are used, is the patient's choice after the exam. If the case is more complex, that conversation happens at a return visit to review the exam and any x-rays, then establish the type of care the patient wants to go through."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do you offer dry needling?",
+      "a": "Yes. Dr. Irwin does dry needling in the clinic. He names it in his memos on low back pain, relief care, and wellness care."
+    },
+    {
+      "q": "When is dry needling used?",
+      "a": "He lists it among the modalities for low back pain; as one of the options in relief care, typically two to six weeks, alongside massage, decompression, and SoftWave; and as something some wellness patients elect once a month to help maintain healthy muscle function."
+    },
+    {
+      "q": "How do I know if dry needling is right for me?",
+      "a": "That is worked out at the first exam, and, when the case is complex, at the report of findings, before you choose a type of care."
+    },
+    {
+      "q": "Do you take insurance?",
+      "a": "No referral is needed to book a first visit. We are in network with BCBS and UHC, and we go over the costs with you before anything begins."
+    }
+  ],
+  "related": [
+    {
+      "title": "Low back pain",
+      "slug": "back-pain"
+    },
+    {
+      "title": "Types of care",
+      "slug": "types-of-care"
+    },
+    {
+      "title": "Wellness care",
+      "slug": "wellness-care"
+    },
+    {
+      "title": "New patient exam",
+      "slug": "new-patients"
+    }
+  ]
+}
