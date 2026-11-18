@@ -1,0 +1,165 @@
+{
+  "slug": "new-patients",
+  "title": "New Patient Exam & First Visit",
+  "card_blurb": "A lengthy, in-depth first exam, and a report of findings when the case is more complex, before you choose a type of care.",
+  "breadcrumb_parent": {
+    "name": "Services",
+    "url": "/services/"
+  },
+  "hero": {
+    "eyebrow": "New patients",
+    "h1_primary": "Your first visit in ",
+    "h1_secondary": "{{city}}",
+    "sub": "The new patient exam is the pillar of treatment. It is more lengthy than most clinics, and also way more in depth, so the problem can be pinpointed before any adjustment.",
+    "image": "Catalog/Services/chiropractic.webp",
+    "alt": "The front desk and information center at a chiropractic clinic"
+  },
+  "meta": [
+    "Complimentary consultation",
+    "History, exam, and digital x-ray when needed",
+    "Serving {{service_towns}}"
+  ],
+  "blocks": [
+    {
+      "type": "answer",
+      "label": "The short answer",
+      "text": "Your first visit is a complete health history and a full evaluation, not a one-page form and a quick adjustment. If x-rays are relevant, they are taken in the clinic. Sometimes the doctor will adjust the same day. If the case is more complex, you may come back for a report of findings, go through the films, and then establish the type of care you want to do."
+    },
+    {
+      "type": "lede",
+      "text": "This page is based on Dr. Nathan Irwin's November 10, 2026 voice memo on the new patient exam, report of findings, and types of care. Phrasing below follows his wording, lightly cleaned."
+    },
+    {
+      "type": "h2",
+      "text": "A complete health history"
+    },
+    {
+      "type": "p",
+      "text": "The exam starts by getting to when the problem potentially started, not just when it started this time, and irons out the quality of pain, where it is, and whether it radiates, plus any surgeries and symptoms over the course of the patient's life."
+    },
+    {
+      "type": "h2",
+      "text": "A full evaluation, before any adjustment"
+    },
+    {
+      "type": "p",
+      "text": "The evaluation starts with range of motion and palpation of the body and spine, then motion palpation and muscle testing, and, if needed, full-scale orthopedic and neurological evaluations, to pinpoint the area the problem is coming from before laying a finger to adjust."
+    },
+    {
+      "type": "p",
+      "text": "Areas connect: some neck issues come from shoulder issues, and some mid-back issues come from shoulder issues, and vice versa. Some low back injuries can be related to pelvic unleveling or hip bursitis. Sciatic-related pain may be a piriformis or muscular issue, and/or degenerative disc disease in the lower part of the back."
+    },
+    {
+      "type": "h2",
+      "text": "Digital x-rays, when they are relevant"
+    },
+    {
+      "type": "p",
+      "text": "If the exam shows x-rays of the area are needed, a set or a full set of digital radiographs is recommended, to see what is being pushed into before adjusting. X-rays are usually taken, especially when pain is one of the primary drivers of the visit. Films can also show anterolisthesis or spondylolisthesis."
+    },
+    {
+      "type": "h2",
+      "text": "The report of findings"
+    },
+    {
+      "type": "p",
+      "text": "Sometimes the doctor will choose to adjust on the first day. If it is a complex case, time may be spent going through the films and the exam before adjusting, with a return appointment to review the results, go through the x-rays, and establish the type of care the patient wants to go through."
+    },
+    {
+      "type": "h2",
+      "text": "What does care cost, and do you take insurance?"
+    },
+    {
+      "type": "p",
+      "text": "No referral is needed to book a first visit. {{clinic_name}} is in network with BCBS and UHC, and costs are reviewed before anything begins."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How is your new patient exam different?",
+      "a": "The new patient exam is the pillar of treatment and is more lengthy and more in depth than a typical one-page intake and quick adjustment."
+    },
+    {
+      "q": "What happens during the exam?",
+      "a": "A complete health history, then range of motion, palpation, motion palpation, muscle testing, and orthopedic and neurological evaluations when needed, before any adjustment."
+    },
+    {
+      "q": "Do you take x-rays on the first visit?",
+      "a": "If the exam shows they are relevant, digital x-rays are taken in the clinic, especially when pain is a primary reason for the visit."
+    },
+    {
+      "q": "Do you adjust on the first day?",
+      "a": "Sometimes yes. If the case is complex, you may return for a report of findings to review the exam and films and then choose a type of care."
+    },
+    {
+      "q": "What is a report of findings?",
+      "a": "A return visit to review the examination and x-rays and establish the type of care you want to go through."
+    },
+    {
+      "q": "Do I need a referral, and do you take insurance?",
+      "a": "No referral is needed. The clinic is in network with BCBS and UHC, and goes over costs before care begins."
+    }
+  ],
+  "faq_heading": "New patient questions we hear most",
+  "related": {
+    "heading": "You might also look at",
+    "items": [
+      {
+        "title": "Types of care",
+        "body": "Visit-to-visit, relief, corrective, and wellness care."
+      },
+      {
+        "title": "Back pain",
+        "body": "How the first exam works when lower back pain is the reason you come in."
+      },
+      {
+        "title": "Wellness care",
+        "body": "Maintenance care after relief or corrective care."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready for a real first exam?",
+    "sub": "Start with a complimentary consultation, then we will take the time the first visit deserves."
+  },
+  "schema": {
+    "name": "New Patient Exam and First Visit in {{city}}, {{state}}",
+    "description": "What a first visit includes: a complete health history, a full exam, digital x-rays when needed, and a report of findings before you choose a type of care.",
+    "about_type": "MedicalProcedure",
+    "about_name": "New patient chiropractic examination",
+    "last_reviewed": "2026-11-18"
+  },
+  "benefits": [
+    {
+      "title": "In depth, not rushed",
+      "text": "A complete history and a full evaluation, not a one-page form and a quick adjustment."
+    },
+    {
+      "title": "See what you are adjusting",
+      "text": "Digital x-rays when the exam shows they are relevant, especially when pain is a primary driver."
+    },
+    {
+      "title": "A clear next step",
+      "text": "Adjust the same day when appropriate, or a report of findings on a return visit, then you choose the type of care."
+    }
+  ],
+  "process": [
+    {
+      "title": "Health history",
+      "text": "When the problem started, not just this time, plus quality of pain, radiation, surgeries, and past symptoms."
+    },
+    {
+      "title": "Full evaluation",
+      "text": "Range of motion, palpation, muscle testing, and orthopedic and neurological testing when needed, before any adjustment."
+    },
+    {
+      "title": "Imaging if indicated",
+      "text": "Digital x-rays in the clinic when the exam shows they are needed."
+    },
+    {
+      "title": "Same-day adjustment or report of findings",
+      "text": "Adjust on the first day, or come back to review findings and choose a type of care."
+    }
+  ],
+  "_note": "NEW catalog file. No existing tools/bd-generator/catalog file covered a new-patient or first-visit page (only gonstead/first-visit.json, which is Gonstead-specific). Do not push this to localember/localember from the preview repo. Add it to catalog/services/new-patients.json when reviewing catalog updates. Client-specific details (BCBS/UHC, Dr. Irwin phrasing) should be layered on at build time; placeholders use {{city}} and {{clinic_name}}."
+}
