@@ -37,12 +37,12 @@
 .har-expertise__row>div{min-width:0}
 </style>
 <style id="le-round5">
-/* 4. New Patient Special card in logo goldenrod, navy text, navy button */
+/* 4. New Patient Special card in logo goldenrod, white heading and icon, navy CLICK HERE button */
 .har-icons .har-card--cta{background:#E0A424}
-.har-icons .har-card--cta .har-card__title{color:#022038}
-.har-icons .har-card--cta .har-card__icon svg{fill:#022038}
-.har-icons .har-card--cta a[data-sd="icons.ctabtn"]{background-color:#022038!important;border-color:#022038!important;color:#fff!important;font-weight:700}
-.har-icons .har-card--cta a[data-sd="icons.ctabtn"]:hover,.har-icons .har-card--cta a[data-sd="icons.ctabtn"]:focus-visible{background-color:#fff!important;border-color:#022038!important;color:#022038!important}
+.har-icons .har-card--cta .har-card__title{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.har-icons .har-card--cta .har-card__icon svg{fill:#fff}
+.har-icons .har-card--cta a[data-sd="icons.ctabtn"]{background-color:#022038!important;border-color:#022038!important;color:#fff!important;font-weight:700;text-shadow:none}
+.har-icons .har-card--cta a[data-sd="icons.ctabtn"]:hover,.har-icons .har-card--cta a[data-sd="icons.ctabtn"]:focus-visible{background-color:#fff!important;border-color:#022038!important;color:#022038!important;text-shadow:none}
 .har-icons .har-card--cta a[data-sd="icons.ctabtn"]:focus-visible{outline:3px solid #022038;outline-offset:3px}
 /* 5. room below the testimonial panel */
 .har-reviews__inner{padding-top:56px;padding-bottom:96px}
@@ -64,7 +64,7 @@
 .le-yt__btn{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:#000}
 .le-yt__btn img{width:100%;height:100%;object-fit:cover;display:block}
 .le-yt__play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:#E0A424;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .2s,background .2s}
-.le-yt__play svg{width:30px;height:30px;fill:#022038;margin-left:5px}
+.le-yt__play svg{width:30px;height:30px;fill:#fff;margin-left:5px}
 .le-yt__btn:hover .le-yt__play,.le-yt__btn:focus-visible .le-yt__play{transform:scale(1.08);background:#C8901A}
 .le-yt__btn:focus-visible{outline:3px solid #E0A424;outline-offset:3px}
 .le-yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -83,7 +83,7 @@
 .har-social .har-social__icon:hover svg,.har-social .har-social__icon:focus-visible svg{fill:#C8901A}
 .har-colophon__social{margin-top:18px;gap:12px;flex-wrap:wrap}
 .har-colophon__social a{width:44px;height:44px;padding:0;background:#E0A424}
-.har-colophon__social a svg{width:20px;height:20px;fill:#022038}
+.har-colophon__social a svg{width:20px;height:20px;fill:#fff}
 .har-colophon__social a:hover,.har-colophon__social a:focus-visible{background:#fff}
 .har-colophon__social a:hover svg,.har-colophon__social a:focus-visible svg{fill:#022038}
 /* Harbor bug: its <1024px rule stacks .har-sshero__inner, but the two-column flex is .har-sshero__row, so service and condition heroes stayed side by side at 390px. */
@@ -109,14 +109,14 @@
 .le-preview-off{cursor:not-allowed}
 </style>
 <style id="le-cta-gold">
-/* Advanced Healthcare: main CTAs use a darkened logo gold so white text stays readable.
-   Fill #8B6D2D with #fff text is 4.86:1 at 15px/700 (AA). Hover #735B26 is 6.45:1.
-   Logo gold #E0A424 is kept for cards, stars and accents. Navy stays on headers, nav and secondary links. */
-:root{--le-cta-gold:#8B6D2D;--le-cta-gold-hover:#735B26;--le-cta-gold-text:#fff}
-.har-btn--book,.har-btn--submit,.har-btn--solid,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
-.har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-btn--solid:hover,.har-btn--solid:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
-.har-btn--book.har-welcome__link{background-color:var(--har-cta)!important;border-color:var(--har-cta)!important;color:#fff!important;font-weight:500}
-.har-btn--book.har-welcome__link:hover{background-color:var(--har-cta)!important;color:#fff!important}
+/* Advanced Healthcare: main CTAs in logo goldenrod #E0A424 with white text.
+   Hover #C98F1A. A light text-shadow helps white text on the gold. John accepted the contrast tradeoff.
+   Navy stays on headers, nav, secondary links, and the New Patient Special card's CLICK HERE button. */
+:root{--le-cta-gold:#E0A424;--le-cta-gold-hover:#C98F1A;--le-cta-gold-text:#fff}
+.har-btn--book,.har-btn--submit,.har-btn--solid,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-btn--solid:hover,.har-btn--solid:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.har-btn--book.har-welcome__link{background-color:var(--har-cta)!important;border-color:var(--har-cta)!important;color:#fff!important;font-weight:500;text-shadow:none}
+.har-btn--book.har-welcome__link:hover{background-color:var(--har-cta)!important;color:#fff!important;text-shadow:none}
 .har-btn--submit[disabled]{opacity:.85;cursor:not-allowed}
 </style>
 <style id="le-round6">
