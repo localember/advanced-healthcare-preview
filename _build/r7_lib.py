@@ -1,3 +1,5 @@
+# NOTE (Round 9): The memo paragraph lists below are internal source material only.
+# Do not publish audio, transcripts, or transcript-like copy on the site.
 #!/usr/bin/env python3
 from __future__ import annotations
 import json, re
