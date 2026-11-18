@@ -70,7 +70,7 @@
 .le-yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .le-yt__cap{margin:10px 0 0;font-size:14px;color:var(--har-body);text-align:center}
 .har-welcome__media{justify-content:center}
-.har-conditions__photo img[src*="Nate-Irwin"]{object-fit:cover;object-position:50% 28%;max-width:523px}
+
 @media (max-width:767px){.le-yt__play{width:64px;height:64px;margin:-32px 0 0 -32px}}
 </style>
 <style id="le-social">
@@ -109,13 +109,40 @@
 .le-preview-off{cursor:not-allowed}
 </style>
 <style id="le-cta-gold">
-/* Advanced Healthcare: main CTAs in logo goldenrod #E0A424 with navy #022038 text (7.51:1). Hover #C8901A (5.89:1). Navy stays on headers, nav and secondary links. */
-:root{--le-cta-gold:#E0A424;--le-cta-gold-hover:#C8901A;--le-cta-gold-text:#022038}
+/* Advanced Healthcare: main CTAs use a darkened logo gold so white text stays readable.
+   Fill #8B6D2D with #fff text is 4.86:1 at 15px/700 (AA). Hover #735B26 is 6.45:1.
+   Logo gold #E0A424 is kept for cards, stars and accents. Navy stays on headers, nav and secondary links. */
+:root{--le-cta-gold:#8B6D2D;--le-cta-gold-hover:#735B26;--le-cta-gold-text:#fff}
 .har-btn--book,.har-btn--submit,.har-btn--solid,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
 .har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-btn--solid:hover,.har-btn--solid:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
 .har-btn--book.har-welcome__link{background-color:var(--har-cta)!important;border-color:var(--har-cta)!important;color:#fff!important;font-weight:500}
 .har-btn--book.har-welcome__link:hover{background-color:var(--har-cta)!important;color:#fff!important}
 .har-btn--submit[disabled]{opacity:.85;cursor:not-allowed}
+</style>
+<style id="le-round6">
+/* Round 6 */
+/* Space between the three hero cards and the navy trust bar */
+.har-icons__inner{padding-bottom:48px}
+@media (max-width:767px){.har-icons__inner{padding-bottom:32px}}
+/* Google rating in the trust bar: logo-gold stars on navy (7.51:1) */
+.har-trust__google{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:inherit;text-decoration:none}
+.har-trust__google:hover,.har-trust__google:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.har-trust__stars{display:inline-flex;gap:2px;color:#E0A424;flex-shrink:0}
+.har-trust__stars svg{width:15px;height:15px;display:block}
+@media (min-width:768px){
+  .har-trust__list{flex-wrap:nowrap;justify-content:center;gap:0;max-width:100%}
+  .har-trust__item{white-space:nowrap;padding:0 12px;font-size:13px;letter-spacing:0.03em}
+  .har-trust__stars svg{width:13px;height:13px}
+}
+/* Our Services: show Dr. Irwin's square portrait in full, not a short landscape crop */
+.har-conditions__photo{display:flex;align-items:flex-start}
+.har-conditions__photo img[src*="Nate-Irwin"]{width:100%;max-width:400px;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 50%}
+.har-conditions__copy{display:flex;flex-direction:column;justify-content:center}
+.har-conditions__cta{margin-top:24px;align-self:flex-start}
+@media (max-width:1119px){.har-conditions__photo{justify-content:center}.har-conditions__cta{align-self:center}}
+/* Five gold stars on each homepage review */
+.har-review__stars{display:flex;justify-content:center;gap:3px;color:#E0A424;margin:0 0 14px}
+.har-review__stars svg{width:20px;height:20px;display:block}
 </style>
 </head>
 <body class="home"><div class="le-preview-banner" role="note">Design preview, not live. Forms are inactive.</div>
@@ -233,8 +260,7 @@
   <ul class="har-trust__list">
       <li class="har-trust__item">Serving Fort Collins Since 2005</li>
       <li class="har-trust__item">Palmer College of Chiropractic Graduate</li>
-      <li class="har-trust__item">SoftWave Therapy</li>
-      <li class="har-trust__item">Shockwave Therapy</li>
+      <li class="har-trust__item"><a class="har-trust__google" href="https://www.google.com/maps/place/Advanced+Healthcare+Chiropractic/@40.5547248,-105.0980313,17z/data=!3m1!4b1!4m6!3m5!1s0x87694bb7593165c3:0x9deff2c415f7851a!8m2!3d40.5547248!4d-105.0980313!16s%2Fg%2F1tfm1yqn" target="_blank" rel="noopener"><span class="har-trust__stars" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span><span>4.8 · 264 Google reviews</span></a></li>
       <li class="har-trust__item">In Network With BCBS and UHC</li>
   </ul>
 </section>
@@ -291,18 +317,6 @@
         <span class="har-expertise__num" aria-hidden="true">3</span>
         <div><h3 class="har-expertise__rowh">A Whole-Body, Family-Oriented Approach</h3><p>Dr. Irwin founded his practice in 2005 with a whole-body approach and a family-oriented mindset. Every visit starts with listening, then a care plan built around you, pairing adjustments with stretches, strengthening, <a href="massage-therapy/">massage</a> and <a href="physical-rehabilitation/">rehab</a>. <a href="who-we-are/">Meet Dr. Irwin</a></p></div>
       </li>
-      <li class="har-expertise__row">
-        <span class="har-expertise__num" aria-hidden="true">4</span>
-        <div><h3 class="har-expertise__rowh">Spinal Decompression and Neuropathy Care</h3><p>Gentle motorised traction for the low back, easing pressure on an irritated disc or nerve, and care for the mechanical and spinal side of neuropathy, alongside the medical care you already have. <a href="decompression/">Spinal decompression</a> · <a href="neuropathy/">Neuropathy care</a></p></div>
-      </li>
-      <li class="har-expertise__row">
-        <span class="har-expertise__num" aria-hidden="true">5</span>
-        <div><p class="le-exp-secondary">Also at Advanced Healthcare</p><h3 class="har-expertise__rowh">SoftWave</h3><p>Unfocused acoustic-wave sessions for minor muscle aches, alongside chiropractic care. <a href="softwave/">About SoftWave</a></p><img class="le-svc-thumb" src="assets/images/softwave-unit.webp" alt="A SoftWave therapy unit with its touchscreen controls" width="1046" height="714" loading="lazy"></div>
-      </li>
-      <li class="har-expertise__row">
-        <span class="har-expertise__num" aria-hidden="true">6</span>
-        <div><h3 class="har-expertise__rowh">Shockwave Therapy</h3><p>Shockwave therapy for long-running tendon and heel problems that have stopped easing. <a href="shockwave/">About Shockwave Therapy</a></p><img class="le-svc-thumb le-svc-thumb--shock" src="assets/images/shockwave-handpiece.webp" alt="A shockwave therapy handpiece being applied to a patient&#x27;s arm" width="528" height="607" loading="lazy"></div>
-      </li>
     </ol>
   </div>
 </section>
@@ -329,6 +343,7 @@
       <div class="har-conditions__copy" data-sd="conditions.body">
         <p>Our first priority is understanding where you are, then helping you get out of pain. From there, the aim is to help you recover, move better, and stay well, whether you are dealing with musculoskeletal pain, a sports or work injury, or focused on your overall health and movement.</p>
         <p>Care here pairs chiropractic adjustments with SoftWave, shockwave, neuropathy care, spinal decompression, massage and rehab, each aimed at finding the root cause of your discomfort.</p>
+        <a class="har-btn har-btn--book har-conditions__cta" href="special/">New Patient Special</a>
       </div>
     </div>
     <h3 class="har-conditions__gridh" data-sd="conditions.gridh">Chiropractic Care May Help These Common Symptoms</h3>
@@ -458,22 +473,27 @@
       <div class="har-reviews__slider">
         <div class="har-reviews__track">
         <article class="har-review is-on" data-sd="reviews.card">
+          <p class="har-review__stars" aria-label="5 star review"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></p>
           <p class="har-review__body">I have been going to Advanced Healthcare Chiropractic for a few years now, after suffering from back, shoulder, and neck pain related to 2 car accidents, getting bucked off a horse, and in general, having scoliosis. Over the last few years, my pain has been significantly minimized and I can function as a normal human being!! The team there is very helpful and treats me as an individual, even giving high fives when I show up! They created a plan to fit my needs, yet I know I am in control of my own treatment every step of the way. They also have amazing massage services there. Michelle is incredible!</p>
           <p class="har-review__name">Lauren P.</p>
         </article>
         <article class="har-review">
+          <p class="har-review__stars" aria-label="5 star review"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></p>
           <p class="har-review__body">My entire family enjoys coming to Advanced Healthcare Chiropractic. Every member of our family has benefited from the care at Advanced Healthcare. Whether it was treating nerve damage from back surgery or trying to prevent sports injuries, our family has definitely reaped the rewards of corrective chiropractic care. The exercises and strength training are amazing along with the positive attitude of all the staff at Advanced Healthcare, who are willing to train you in the proper way to keep your body healthy and strong. Thank you Advanced Healthcare for giving our family a better way to live our lives!</p>
           <p class="har-review__name">Pam F.</p>
         </article>
         <article class="har-review">
+          <p class="har-review__stars" aria-label="5 star review"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></p>
           <p class="har-review__body">I have been at Advanced Healthcare Chiropractic for two years and it has made a huge difference. The most dramatic change for me has been my sleep quality. For years I had a hard time falling and staying asleep. Since starting care at Advanced Healthcare, I have found that as soon as I lay down I fall to sleep with few to no disturbances until I wake up. The “whole package” of stretches, strengthening, massage, and adjustments makes the difference.</p>
           <p class="har-review__name">Karli H.</p>
         </article>
         <article class="har-review">
+          <p class="har-review__stars" aria-label="5 star review"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></p>
           <p class="har-review__body">My sciatica is almost gone. I sleep through the night and am able to work full time again. I went camping last weekend and felt really good! The exercises given to me are helping me care for my body long-term rather than crisis management style. Your staff is wonderful! Not only are they helpful but I’ve made friends with several of your staff in the process.</p>
           <p class="har-review__name">Katie K.</p>
         </article>
         <article class="har-review">
+          <p class="har-review__stars" aria-label="5 star review"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></p>
           <p class="har-review__body">I’ve been going to Advanced Healthcare Chiropractic for about a month and a half and have noticed a great improvement. My body feels more open and alive. The tension in my back and neck is lessening significantly. I am finally sleeping at night without neck pain. I highly recommend Advanced Healthcare and am thankful for how they’ve helped me!</p>
           <p class="har-review__name">Jeannie S.</p>
         </article>

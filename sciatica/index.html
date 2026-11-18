@@ -54,8 +54,10 @@
 .le-preview-off{cursor:not-allowed}
 </style>
 <style id="le-cta-gold">
-/* Advanced Healthcare: main CTAs in logo goldenrod #E0A424 with navy #022038 text (7.51:1). Hover #C8901A (5.89:1). Navy stays on headers, nav and secondary links. */
-:root{--le-cta-gold:#E0A424;--le-cta-gold-hover:#C8901A;--le-cta-gold-text:#022038}
+/* Advanced Healthcare: main CTAs use a darkened logo gold so white text stays readable.
+   Fill #8B6D2D with #fff text is 4.86:1 at 15px/700 (AA). Hover #735B26 is 6.45:1.
+   Logo gold #E0A424 is kept for cards, stars and accents. Navy stays on headers, nav and secondary links. */
+:root{--le-cta-gold:#8B6D2D;--le-cta-gold-hover:#735B26;--le-cta-gold-text:#fff}
 .har-btn--book,.har-btn--submit,.har-btn--solid,.har-icons a[data-sd="icons.ctabtn"]{background-color:var(--le-cta-gold)!important;color:var(--le-cta-gold-text)!important;border-color:var(--le-cta-gold)!important;font-weight:700}
 .har-btn--book:hover,.har-btn--book:focus-visible,.har-btn--submit:hover,.har-btn--submit:focus-visible,.har-btn--solid:hover,.har-btn--solid:focus-visible,.har-icons a[data-sd="icons.ctabtn"]:hover,.har-icons a[data-sd="icons.ctabtn"]:focus-visible{background-color:var(--le-cta-gold-hover)!important;border-color:var(--le-cta-gold-hover)!important;color:var(--le-cta-gold-text)!important}
 .har-btn--book.har-welcome__link{background-color:var(--har-cta)!important;border-color:var(--har-cta)!important;color:#fff!important;font-weight:500}
